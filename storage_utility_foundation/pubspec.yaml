@@ -1,0 +1,35 @@
+name: storage_utility_foundation
+description: iOS and macOS implementation of the storage_utility plugin.
+version: 1.0.0
+homepage: https://github.com/DeepHow/App-StorageUtility/tree/main/storage_utility_foundation
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+flutter:
+  plugin:
+    implements: storage_utility
+    platforms:
+      ios:
+        pluginClass: StorageUtilityPlugin
+        dartPluginClass: StorageUtilityFoundation
+        sharedDarwinSource: true
+      macos:
+        pluginClass: StorageUtilityPlugin
+        dartPluginClass: StorageUtilityFoundation
+        sharedDarwinSource: true
+
+dependencies:
+  flutter:
+    sdk: flutter
+  storage_utility_platform_interface: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+topics:
+  - disk
+  - storage

@@ -1,0 +1,40 @@
+name: storage_utility
+description: Flutter plugin for getting storage information on host platform, such as available space and total space.
+version: 1.0.0
+homepage: https://github.com/DeepHow/App-StorageUtility/tree/main/storage_utility
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+flutter:
+  plugin:
+    platforms:
+      android:
+        default_package: storage_utility_android
+      ios:
+        default_package: storage_utility_foundation
+      macos:
+        default_package: storage_utility_foundation
+      windows:
+        default_package: storage_utility_windows
+
+dependencies:
+  flutter:
+    sdk: flutter
+  path_provider: ^2.1.1
+  storage_utility_android: ^1.0.0
+  storage_utility_foundation: ^1.0.0
+  storage_utility_platform_interface: ^1.0.0
+  storage_utility_windows: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+  path_provider_platform_interface: ^2.1.1
+  plugin_platform_interface: ^2.0.2
+
+topics:
+  - disk
+  - storage

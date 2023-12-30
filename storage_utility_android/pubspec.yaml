@@ -1,0 +1,31 @@
+name: storage_utility_android
+description: Android implementation of the storage_utility plugin.
+version: 1.0.0
+homepage: https://github.com/DeepHow/App-StorageUtility/tree/main/storage_utility_android
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+  flutter: '>=3.3.0'
+
+flutter:
+  plugin:
+    implements: storage_utility
+    platforms:
+      android:
+        package: com.deephow.storage_utility
+        pluginClass: StorageUtilityPlugin
+        dartPluginClass: StorageUtilityAndroid
+
+dependencies:
+  flutter:
+    sdk: flutter
+  storage_utility_platform_interface: ^1.0.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+topics:
+  - disk
+  - storage
